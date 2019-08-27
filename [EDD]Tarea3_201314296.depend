@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1566881220 source:c:\users\hector\documents\edd\[edd]tarea3_201314296\main.cpp
+	<iostream>
+	<conio.h>
+	"Arbol.h"
+
+1566880905 source:c:\users\hector\documents\edd\[edd]tarea3_201314296\src\nodoarbol.cpp
+	"NodoArbol.h"
+	<iostream>
+	<stdlib.h>
+
+1566881512 c:\users\hector\documents\edd\[edd]tarea3_201314296\include\nodoarbol.h
+	<iostream>
+	<conio.h>
+
+1566881482 source:c:\users\hector\documents\edd\[edd]tarea3_201314296\src\arbol.cpp
+	"Arbol.h"
+	<iostream>
+	<stdlib.h>
+
+1566881495 c:\users\hector\documents\edd\[edd]tarea3_201314296\include\arbol.h
+	"NodoArbol.h"
+	<iostream>
+	<stdlib.h>
+
