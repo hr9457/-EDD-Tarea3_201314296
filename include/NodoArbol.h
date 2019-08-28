@@ -7,16 +7,12 @@ using namespace std;
 
 class NodoArbol
 {
-    private:
+    public:
         string dato;
-        NodoArbol *padre;
         NodoArbol *derecha;
         NodoArbol *izquierda;
 
-    public:
-        NodoArbol(string);
-
-
+        NodoArbol(string);//constructor
 };
 
 #endif // NODOARBOL_H

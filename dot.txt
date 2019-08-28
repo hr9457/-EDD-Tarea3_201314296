@@ -1,0 +1,17 @@
+digraph arbol
+{
+rankdir=TB;
+graph [splines=ortho, nodesep=0.5];
+node [shape = record, style=filled, fillcolor=seashell2,width=0.7,height=0.2];
+nodoluigui[ label = "<C0>|luigui|<C1>"]; 
+nodoluigui:C0->nodohammer
+nodohammer[ label = "<C0>|hammer|<C1>"]; 
+nodohammer:C0->nodofermin
+nodofermin[ label = "<C0>|fermin|<C1>"]; 
+nodoluigui:C1->nodomario
+nodomario[ label = "<C0>|mario|<C1>"]; 
+nodomario:C1->nodopeach
+nodopeach[ label = "<C0>|peach|<C1>"]; 
+nodopeach:C1->nodopow
+nodopow[ label = "<C0>|pow|<C1>"]; 
+}

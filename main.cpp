@@ -7,5 +7,13 @@ using namespace std;
 int main()
 {
     Arbol tree;
+    tree.insertar("luigui");
+    tree.insertar("hammer");
+    tree.insertar("mario");
+    tree.insertar("peach");
+    tree.insertar("pow");
+    tree.insertar("fermin");
+    //tree.impresion(tree.raiz);
+    tree.generarDot();
     return 0;
 }
