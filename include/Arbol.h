@@ -22,7 +22,7 @@ class Arbol
         void impresion(NodoArbol*);
         void generarDot();
         void eliminarNodo(string);
-        void buscarNodo(NodoArbol*);
+        void buscarNodo(NodoArbol*,string);
 };
 
 #endif // ARBOL_H

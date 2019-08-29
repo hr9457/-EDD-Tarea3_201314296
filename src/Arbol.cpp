@@ -77,17 +77,26 @@ void Arbol::generarDot(){
     }
 }
 
-void Arbol::buscarNodo(NodoArbol *inicio){
+void Arbol::buscarNodo(NodoArbol *inicio,string nodoAeliminar){
+    if( nodoAeliminar == inicio->dato ){
+    }else if( nodoAeliminar<inicio->dato && inicio->izquierda!=NULL ){
+        inicio = inicio->izquierda;
+        buscarNodo(inicio,nodoAeliminar);
+    }else if( nodoAeliminar>=inicio->dato && inicio->derecha!=NULL ){
+        inicio = inicio->derecha;
+        buscarNodo(inicio,nodoAeliminar);
+    }else{
+        cout<<"el nodo que estas buscando no exite en el arbol"<<endl;
+    }
 }
 
-void Arbol::eliminarNodo(string nodo){
+void Arbol::eliminarNodo(string nodoAeliminar){
     NodoArbol *nodoAuxiliar = raiz;
-    if(nodo<nodoAuxiliar->dato){
-        cout<<"el dato se encuetra por la izquierda"<<endl;
-        buscarNodo(nodoAuxiliar->izquierda);
+    if(nodoAuxiliar==NULL){
+        cout<<"el arbol se encuentra vacio"<<endl;
     }else{
-        cout<<"el dato se encuentra por la derecha"<<endl;
-        buscarNodo(nodoAuxiliar->derecha);
+        cout<<"buscando nodo en el arbol"<<endl;
+        buscarNodo(nodoAuxiliar,nodoAeliminar);
     }
 }
 

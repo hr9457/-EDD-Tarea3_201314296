@@ -13,7 +13,7 @@
 	<iostream>
 	<conio.h>
 
-1567032378 source:c:\users\hector\documents\edd\[edd]tarea3_201314296\src\arbol.cpp
+1567048839 source:c:\users\hector\documents\edd\[edd]tarea3_201314296\src\arbol.cpp
 	"Arbol.h"
 	"NodoArbol.h"
 	<iostream>
@@ -22,7 +22,7 @@
 	<stdlib.h>
 	<fstream>
 
-1567032312 c:\users\hector\documents\edd\[edd]tarea3_201314296\include\arbol.h
+1567043021 c:\users\hector\documents\edd\[edd]tarea3_201314296\include\arbol.h
 	"NodoArbol.h"
 	<iostream>
 	<stdlib.h>
