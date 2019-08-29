@@ -12,6 +12,4 @@ nodoluigui:C1->nodomario
 nodomario[ label = "<C0>|mario|<C1>"]; 
 nodomario:C1->nodopeach
 nodopeach[ label = "<C0>|peach|<C1>"]; 
-nodopeach:C1->nodopow
-nodopow[ label = "<C0>|pow|<C1>"]; 
 }

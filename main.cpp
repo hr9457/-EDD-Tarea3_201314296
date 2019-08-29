@@ -15,6 +15,10 @@ int main()
     tree.insertar("fermin");
     //tree.impresion(tree.raiz);
     tree.generarDot();
+    cout<<""<<endl;
     tree.eliminarNodo("hector");
+    cout<<""<<endl;
+    tree.eliminarNodo("pow");
+    tree.generarDot();
     return 0;
 }

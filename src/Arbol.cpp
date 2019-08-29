@@ -77,8 +77,24 @@ void Arbol::generarDot(){
     }
 }
 
+void Arbol::borrarNodo(NodoArbol *nodoEncontrado,string nodoAeliminar){
+    //PRIMER CASO DONDE EL NODO ENCONTRADO NO TIENE HIJOS
+    if( nodoEncontrado->izquierda==NULL  && nodoEncontrado->derecha==NULL ){
+        cout<<"nodo eliminado sin hijos"<<endl;
+        nodoEncontrado = nodoEncontrado->padre;
+        cout<<"el padre del nodo encontrado es: "<<nodoEncontrado->dato<<endl;
+        if( nodoAeliminar < nodoEncontrado->dato ){
+            nodoEncontrado->izquierda = NULL;
+        }else if( nodoAeliminar >= nodoEncontrado->dato ){
+            nodoEncontrado->derecha = NULL;
+        }
+    }
+}
+
 void Arbol::buscarNodo(NodoArbol *inicio,string nodoAeliminar){
     if( nodoAeliminar == inicio->dato ){
+        cout<<"nodo encontrado"<<endl;
+        borrarNodo(inicio,nodoAeliminar);
     }else if( nodoAeliminar<inicio->dato && inicio->izquierda!=NULL ){
         inicio = inicio->izquierda;
         buscarNodo(inicio,nodoAeliminar);

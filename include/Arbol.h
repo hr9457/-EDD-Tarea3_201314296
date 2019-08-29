@@ -23,6 +23,7 @@ class Arbol
         void generarDot();
         void eliminarNodo(string);
         void buscarNodo(NodoArbol*,string);
+        void borrarNodo(NodoArbol*,string);
 };
 
 #endif // ARBOL_H
