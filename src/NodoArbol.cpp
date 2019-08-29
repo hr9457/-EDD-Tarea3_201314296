@@ -9,4 +9,5 @@ NodoArbol::NodoArbol(string informacion)
     dato = informacion;
     derecha = NULL;
     izquierda = NULL;
+    padre = NULL;
 }

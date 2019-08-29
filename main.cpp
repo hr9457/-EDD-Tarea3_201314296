@@ -15,5 +15,6 @@ int main()
     tree.insertar("fermin");
     //tree.impresion(tree.raiz);
     tree.generarDot();
+    tree.eliminarNodo("peach");
     return 0;
 }

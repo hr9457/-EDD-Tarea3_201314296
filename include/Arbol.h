@@ -21,6 +21,8 @@ class Arbol
         void insertar(string);
         void impresion(NodoArbol*);
         void generarDot();
+        void eliminarNodo(string);
+        void buscarNodo(NodoArbol*);
 };
 
 #endif // ARBOL_H

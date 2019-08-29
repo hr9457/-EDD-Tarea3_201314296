@@ -11,7 +11,7 @@ class NodoArbol
         string dato;
         NodoArbol *derecha;
         NodoArbol *izquierda;
-
+        NodoArbol *padre;
         NodoArbol(string);//constructor
 };
 

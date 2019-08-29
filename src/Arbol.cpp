@@ -12,11 +12,12 @@ Arbol::Arbol(){
     raiz = NULL;
 }
 
+//METODO PARA AGREGAR UN NODO AL ARBOL
 void Arbol::insertar(string informacion){
-
     NodoArbol *nuevoNodo = new NodoArbol(informacion);
     if(raiz == NULL){
         raiz = nuevoNodo;
+        nuevoNodo->padre=raiz;
     }else{
         NodoArbol *nodoAuxiliar = raiz;
         NodoArbol *padre;
@@ -26,12 +27,14 @@ void Arbol::insertar(string informacion){
                 nodoAuxiliar = nodoAuxiliar->izquierda;
                 if(nodoAuxiliar==NULL){
                     padre->izquierda = nuevoNodo;
+                    nuevoNodo->padre=padre;
                     return;
                 }
             }else{
                 nodoAuxiliar = nodoAuxiliar->derecha;
                 if(nodoAuxiliar==NULL){
                     padre->derecha = nuevoNodo;
+                    nuevoNodo->padre=padre;
                     return;
                 }
             }
@@ -74,4 +77,17 @@ void Arbol::generarDot(){
     }
 }
 
+void Arbol::buscarNodo(NodoArbol *inicio){
+}
+
+void Arbol::eliminarNodo(string nodo){
+    NodoArbol *nodoAuxiliar = raiz;
+    if(nodo<nodoAuxiliar->dato){
+        cout<<"el dato se encuetra por la izquierda"<<endl;
+        buscarNodo(nodoAuxiliar->izquierda);
+    }else{
+        cout<<"el dato se encuentra por la derecha"<<endl;
+        buscarNodo(nodoAuxiliar->derecha);
+    }
+}
 
