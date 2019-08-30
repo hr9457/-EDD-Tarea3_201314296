@@ -10,6 +10,6 @@ nodohammer:C0->nodofermin
 nodofermin[ label = "<C0>|fermin|<C1>"]; 
 nodoluigui:C1->nodomario
 nodomario[ label = "<C0>|mario|<C1>"]; 
-nodomario:C1->nodopeach
-nodopeach[ label = "<C0>|peach|<C1>"]; 
+nodomario:C1->nodopow
+nodopow[ label = "<C0>|pow|<C1>"]; 
 }

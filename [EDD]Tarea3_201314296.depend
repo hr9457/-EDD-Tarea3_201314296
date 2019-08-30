@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1567050834 source:c:\users\hector\documents\edd\[edd]tarea3_201314296\main.cpp
+1567133968 source:c:\users\hector\documents\edd\[edd]tarea3_201314296\main.cpp
 	<iostream>
 	<conio.h>
 	"Arbol.h"
@@ -13,7 +13,7 @@
 	<iostream>
 	<conio.h>
 
-1567052460 source:c:\users\hector\documents\edd\[edd]tarea3_201314296\src\arbol.cpp
+1567133345 source:c:\users\hector\documents\edd\[edd]tarea3_201314296\src\arbol.cpp
 	"Arbol.h"
 	"NodoArbol.h"
 	<iostream>

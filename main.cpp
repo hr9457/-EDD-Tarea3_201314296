@@ -14,11 +14,19 @@ int main()
     tree.insertar("pow");
     tree.insertar("fermin");
     //tree.impresion(tree.raiz);
-    tree.generarDot();
-    cout<<""<<endl;
+    /*
+    cout<<"---------------------"<<endl;
     tree.eliminarNodo("hector");
-    cout<<""<<endl;
+    */
+    /*
+    cout<<"---------------------"<<endl;
     tree.eliminarNodo("pow");
     tree.generarDot();
+    */
+    cout<<"---------------------"<<endl;
+    tree.eliminarNodo("peach");
+    tree.generarDot();
+    cout<<"---------------------"<<endl;
+
     return 0;
 }

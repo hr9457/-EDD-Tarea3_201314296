@@ -78,18 +78,38 @@ void Arbol::generarDot(){
 }
 
 void Arbol::borrarNodo(NodoArbol *nodoEncontrado,string nodoAeliminar){
+
     //PRIMER CASO DONDE EL NODO ENCONTRADO NO TIENE HIJOS
     if( nodoEncontrado->izquierda==NULL  && nodoEncontrado->derecha==NULL ){
         cout<<"nodo eliminado sin hijos"<<endl;
-        nodoEncontrado = nodoEncontrado->padre;
+        nodoEncontrado = nodoEncontrado->padre;//BUSQUEDA DEL PADRE DEL NODO
         cout<<"el padre del nodo encontrado es: "<<nodoEncontrado->dato<<endl;
+        //VER SI EL NODO A ELMINIAR ESTA HACIA LA DERECHA O IZQUIERDA
         if( nodoAeliminar < nodoEncontrado->dato ){
             nodoEncontrado->izquierda = NULL;
         }else if( nodoAeliminar >= nodoEncontrado->dato ){
             nodoEncontrado->derecha = NULL;
         }
+    //FIN DEL PRIMER CASO DONDE LOS NODOS NO TIENE HIJOS
     }
-}
+    //SEGUNDO CASO DONDE LOS NODOS POSEEEN HIJOS
+    //NODOS PADRES
+    //ELIMINACION HACIA ES ELEMENTO HACIA LA DEECHA Y HACIA LA IZQUIERDA POSIBLE SI TUVIERAN + HIJOS
+    else if( nodoEncontrado->derecha!=NULL ){
+        cout<<"se econtro un nodo con hijos hacia la derecha"<<endl;
+        nodoEncontrado = nodoEncontrado->derecha;
+        if(nodoEncontrado->izquierda==NULL){
+            cout<<"bajo hacia la derecha que seria :"<<nodoEncontrado->dato<<endl;
+            nodoEncontrado = nodoEncontrado->padre;
+            cout<<"regreso al padre que es: "<<nodoEncontrado->dato<<endl;
+            NodoArbol *intercambio = nodoEncontrado->derecha;
+            nodoEncontrado->dato = intercambio->dato;
+            nodoEncontrado->derecha = NULL;
+        }else{
+            cout<<"el nodo hacia la derecha es solo hijo"<<endl;
+        }
+    }
+}//FIN DEL METODO PARA BORRAR UN NODO EN UN ARBOL
 
 void Arbol::buscarNodo(NodoArbol *inicio,string nodoAeliminar){
     if( nodoAeliminar == inicio->dato ){
@@ -107,12 +127,12 @@ void Arbol::buscarNodo(NodoArbol *inicio,string nodoAeliminar){
 }
 
 void Arbol::eliminarNodo(string nodoAeliminar){
-    NodoArbol *nodoAuxiliar = raiz;
-    if(nodoAuxiliar==NULL){
+    //NodoArbol *nodoAuxiliar = raiz;
+    if(raiz==NULL){
         cout<<"el arbol se encuentra vacio"<<endl;
     }else{
         cout<<"buscando nodo en el arbol"<<endl;
-        buscarNodo(nodoAuxiliar,nodoAeliminar);
+        buscarNodo(raiz,nodoAeliminar);
     }
 }
 
