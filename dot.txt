@@ -8,8 +8,14 @@ nodoluigui:C0->nodohammer
 nodohammer[ label = "<C0>|hammer|<C1>"]; 
 nodohammer:C0->nodofermin
 nodofermin[ label = "<C0>|fermin|<C1>"]; 
-nodoluigui:C1->nodomario
-nodomario[ label = "<C0>|mario|<C1>"]; 
-nodomario:C1->nodopow
-nodopow[ label = "<C0>|pow|<C1>"]; 
+nodofermin:C0->nodoedd
+nodoedd[ label = "<C0>|edd|<C1>"]; 
+nodoedd:C0->nodoBoo
+nodoBoo[ label = "<C0>|Boo|<C1>"]; 
+nodoBoo:C1->nodoKamek
+nodoKamek[ label = "<C0>|Kamek|<C1>"]; 
+nodoluigui:C1->nodostar
+nodostar[ label = "<C0>|star|<C1>"]; 
+nodostar:C1->nodowhomp
+nodowhomp[ label = "<C0>|whomp|<C1>"]; 
 }

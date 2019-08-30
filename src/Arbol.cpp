@@ -104,7 +104,7 @@ void Arbol::borrarNodo(NodoArbol *nodoEncontrado,string nodoAeliminar){
             cout<<"regreso al padre que es: "<<nodoEncontrado->dato<<endl;
             NodoArbol *intercambio = nodoEncontrado->derecha;
             nodoEncontrado->dato = intercambio->dato;
-            nodoEncontrado->derecha = NULL;
+            nodoEncontrado->derecha = intercambio->derecha;
         }else{
             cout<<"el nodo hacia la derecha es solo hijo"<<endl;
         }
@@ -136,3 +136,6 @@ void Arbol::eliminarNodo(string nodoAeliminar){
     }
 }
 
+void Arbol::generarImagenDot(){
+    system("dot -Tpng C:\\Users\\HECTOR\\Documents\\EDD\\[EDD]Tarea3_201314296\\dot.txt -o C:\\Users\\HECTOR\\Documents\\EDD\\[EDD]Tarea3_201314296\\dot.png ");
+}

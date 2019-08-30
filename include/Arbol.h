@@ -24,6 +24,7 @@ class Arbol
         void eliminarNodo(string);
         void buscarNodo(NodoArbol*,string);
         void borrarNodo(NodoArbol*,string);
+        void generarImagenDot();
 };
 
 #endif // ARBOL_H
